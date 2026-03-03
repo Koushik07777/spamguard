@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SpamGuard - AI Spam Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>SpamGuard</h1>
+
+    <div id="authSection">
+        <h2>Login / Register</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="register()">Register</button>
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="dashboard" style="display:none;">
+        <h2>Spam Detection Dashboard</h2>
+        <textarea id="emailText" placeholder="Enter email content..."></textarea>
+        <button onclick="checkSpam()">Check Spam</button>
+        <p id="loading" style="display:none;">Analyzing...</p>
+
+        <h3 id="result"></h3>
+        <p id="confidence"></p>
+
+        <button onclick="showHistory()">View History</button>
+        <button onclick="logout()">Logout</button>
+
+        <div id="historySection"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
